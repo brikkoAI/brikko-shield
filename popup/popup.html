@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brikko Shield</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="hdr">
+      <div class="hdr__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" role="img" aria-label="Shield">
+          <path
+            d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"
+            fill="#fafaf9"
+          />
+        </svg>
+      </div>
+      <div class="hdr__title">
+        <div class="hdr__name" data-i18n="popup_title">Brikko Shield</div>
+        <div class="hdr__sub" data-i18n="popup_subtitle">Защита ПД для Claude.ai</div>
+      </div>
+    </header>
+
+    <section class="status" aria-live="polite">
+      <span id="status-dot" class="status__dot status__dot--off"></span>
+      <span id="status-text" class="status__text" data-i18n="status_inactive">Не настроена</span>
+    </section>
+
+    <section class="block">
+      <label class="lbl" for="api-key" data-i18n="api_key_label">API-ключ Brikko</label>
+      <div class="row">
+        <input
+          id="api-key"
+          type="password"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="brk_..."
+        />
+        <button id="show-key" type="button" class="btn btn--ghost" title="Показать / скрыть">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path
+              d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+              fill="currentColor"
+            />
+            <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+      <div class="row row--end">
+        <a class="link" href="https://brikko.ru/app" target="_blank" rel="noopener" data-i18n="get_key_link"
+          >Получить ключ на brikko.ru</a
+        >
+        <button id="save-btn" class="btn" data-i18n="save_button">Сохранить</button>
+      </div>
+      <div id="save-feedback" class="feedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="block toggle-block">
+      <label class="toggle">
+        <input id="enabled-toggle" type="checkbox" />
+        <span class="toggle__track"><span class="toggle__thumb"></span></span>
+        <span class="toggle__lbl" data-i18n="toggle_label">Включена</span>
+      </label>
+    </section>
+
+    <footer class="ftr">
+      <span>v0.1.0 · MVP</span>
+      <a href="https://github.com/brikkoAI/brikko-shield" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

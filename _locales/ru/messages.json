@@ -1,0 +1,58 @@
+{
+  "extension_name": {
+    "message": "Brikko Shield",
+    "description": "Extension display name"
+  },
+  "extension_description": {
+    "message": "Защита персональных данных при работе с Claude. Маскирует ПД перед отправкой в LLM и восстанавливает в ответе.",
+    "description": "Extension description"
+  },
+  "popup_title": {
+    "message": "Brikko Shield"
+  },
+  "popup_subtitle": {
+    "message": "Защита ПД для Claude.ai"
+  },
+  "status_active": {
+    "message": "Защита активна"
+  },
+  "status_inactive": {
+    "message": "Не настроена"
+  },
+  "status_paused": {
+    "message": "Приостановлена"
+  },
+  "api_key_label": {
+    "message": "API-ключ Brikko"
+  },
+  "api_key_placeholder": {
+    "message": "brk_..."
+  },
+  "save_button": {
+    "message": "Сохранить"
+  },
+  "saved_label": {
+    "message": "Сохранено"
+  },
+  "get_key_link": {
+    "message": "Получить ключ на brikko.ru"
+  },
+  "toggle_label": {
+    "message": "Включена"
+  },
+  "badge_protected": {
+    "message": "ПД защищены"
+  },
+  "badge_protecting": {
+    "message": "Маскируем..."
+  },
+  "badge_error": {
+    "message": "Ошибка защиты"
+  },
+  "shield_button": {
+    "message": "Защитить"
+  },
+  "shield_button_working": {
+    "message": "Маскируем..."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "extension_name": {
+    "message": "Brikko Shield"
+  },
+  "extension_description": {
+    "message": "Privacy shield for LLM chats. Masks PII before sending to Claude and restores it in responses."
+  },
+  "popup_title": {
+    "message": "Brikko Shield"
+  },
+  "popup_subtitle": {
+    "message": "PII shield for Claude.ai"
+  },
+  "status_active": {
+    "message": "Protection active"
+  },
+  "status_inactive": {
+    "message": "Not configured"
+  },
+  "status_paused": {
+    "message": "Paused"
+  },
+  "api_key_label": {
+    "message": "Brikko API key"
+  },
+  "api_key_placeholder": {
+    "message": "brk_..."
+  },
+  "save_button": {
+    "message": "Save"
+  },
+  "saved_label": {
+    "message": "Saved"
+  },
+  "get_key_link": {
+    "message": "Get a key at brikko.ru"
+  },
+  "toggle_label": {
+    "message": "Enabled"
+  },
+  "badge_protected": {
+    "message": "PII masked"
+  },
+  "badge_protecting": {
+    "message": "Masking..."
+  },
+  "badge_error": {
+    "message": "Protection error"
+  },
+  "shield_button": {
+    "message": "Shield"
+  },
+  "shield_button_working": {
+    "message": "Masking..."
+  }
+}

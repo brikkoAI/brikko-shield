@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extension_name__",
+  "version": "0.1.0",
+  "description": "__MSG_extension_description__",
+  "default_locale": "ru",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://api.brikko.ru/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Brikko Shield",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content/claude.ai.js"],
+      "css": ["content/pii-shield-badge.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

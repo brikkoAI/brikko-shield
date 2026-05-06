@@ -1,0 +1,222 @@
+/* Brikko Shield — popup */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+  font-size: 13px;
+  color: #1c1917;
+  background: #fafaf9;
+}
+
+.hdr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #1c1917;
+  color: #fafaf9;
+}
+
+.hdr__icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: #292524;
+  border-radius: 8px;
+}
+
+.hdr__name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hdr__sub {
+  font-size: 11px;
+  color: #a8a29e;
+  margin-top: 2px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f5f5f4;
+  border-bottom: 1px solid #e7e5e4;
+  font-weight: 500;
+}
+
+.status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status__dot--on { background: #16a34a; box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18); }
+.status__dot--off { background: #a8a29e; }
+.status__dot--paused { background: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18); }
+
+.block {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e7e5e4;
+}
+
+.lbl {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #57534e;
+  margin-bottom: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.row--end {
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+input[type="password"],
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  background: #fff;
+  color: #1c1917;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #1c1917;
+  box-shadow: 0 0 0 3px rgba(28, 25, 23, 0.12);
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid #1c1917;
+  background: #1c1917;
+  color: #fafaf9;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 120ms;
+}
+
+.btn:hover { background: #292524; }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid #f59e0b; outline-offset: 2px; }
+
+.btn--ghost {
+  background: transparent;
+  color: #57534e;
+  border-color: #d6d3d1;
+  padding: 6px 8px;
+}
+.btn--ghost:hover { background: #f5f5f4; color: #1c1917; }
+
+.link {
+  font-size: 11px;
+  color: #57534e;
+  text-decoration: none;
+  border-bottom: 1px dashed #a8a29e;
+}
+.link:hover { color: #1c1917; border-bottom-color: #1c1917; }
+
+.feedback {
+  min-height: 16px;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.feedback--err { color: #b91c1c; }
+
+.toggle-block {
+  background: #fff;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle__track {
+  width: 36px;
+  height: 20px;
+  background: #d6d3d1;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 160ms;
+  flex-shrink: 0;
+}
+
+.toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 160ms;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle input:checked + .toggle__track {
+  background: #1c1917;
+}
+
+.toggle input:checked + .toggle__track .toggle__thumb {
+  transform: translateX(16px);
+}
+
+.toggle input:focus-visible + .toggle__track {
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4);
+}
+
+.toggle__lbl { font-weight: 500; }
+
+.ftr {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-size: 11px;
+  color: #78716c;
+  background: #f5f5f4;
+}
+
+.ftr a {
+  color: #57534e;
+  text-decoration: none;
+}
+.ftr a:hover { color: #1c1917; text-decoration: underline; }
