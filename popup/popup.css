@@ -206,6 +206,14 @@ input[type="text"]:focus {
 
 .toggle__lbl { font-weight: 500; }
 
+.hint {
+  margin-top: 6px;
+  margin-left: 46px;
+  font-size: 11px;
+  color: #78716c;
+  line-height: 1.35;
+}
+
 .ftr {
   display: flex;
   justify-content: space-between;

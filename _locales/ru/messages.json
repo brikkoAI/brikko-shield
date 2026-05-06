@@ -4,14 +4,14 @@
     "description": "Extension display name"
   },
   "extension_description": {
-    "message": "Защита персональных данных при работе с Claude. Маскирует ПД перед отправкой в LLM и восстанавливает в ответе.",
+    "message": "Защита персональных данных при работе с ChatGPT и Claude. Маскирует ПД перед отправкой в LLM и восстанавливает в ответе.",
     "description": "Extension description"
   },
   "popup_title": {
     "message": "Brikko Shield"
   },
   "popup_subtitle": {
-    "message": "Защита ПД для Claude.ai"
+    "message": "Защита ПД для ChatGPT и Claude.ai"
   },
   "status_active": {
     "message": "Защита активна"
@@ -38,7 +38,49 @@
     "message": "Получить ключ на brikko.ru"
   },
   "toggle_label": {
-    "message": "Включена"
+    "message": "Расширение включено"
+  },
+  "auto_intercept_label": {
+    "message": "Автоматическая защита (Enter)"
+  },
+  "auto_intercept_hint": {
+    "message": "При Enter маскируем ПД до отправки."
+  },
+  "auto_intercept_hint_long": {
+    "message": "При нажатии Enter в чате текст маскируется до отправки в LLM. Если выключено — работает только ручная кнопка «🛡 Защитить»."
+  },
+  "open_options": {
+    "message": "Настройки"
+  },
+  "options_subtitle": {
+    "message": "Настройки приватности для LLM-чатов"
+  },
+  "section_api": {
+    "message": "API-ключ"
+  },
+  "section_protection": {
+    "message": "Защита"
+  },
+  "section_sites": {
+    "message": "Сайты"
+  },
+  "section_stats": {
+    "message": "Статистика"
+  },
+  "show_hide": {
+    "message": "Показать"
+  },
+  "enabled_hint": {
+    "message": "Глобальный выключатель. Когда выключено, расширение не вмешивается в чаты."
+  },
+  "sites_hint": {
+    "message": "Включайте защиту только там, где она вам нужна. Расширение работает только на этих доменах."
+  },
+  "stat_today": {
+    "message": "запросов защищено сегодня"
+  },
+  "stats_hint": {
+    "message": "Brikko Shield не отправляет никаких метрик наружу. Эти числа хранятся только в вашем браузере."
   },
   "badge_protected": {
     "message": "ПД защищены"

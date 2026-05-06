@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extension_name__",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "__MSG_extension_description__",
   "default_locale": "ru",
   "permissions": ["storage"],
   "host_permissions": [
     "https://claude.ai/*",
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
     "https://api.brikko.ru/*"
   ],
   "action": {
@@ -18,6 +20,10 @@
       "128": "icons/icon-128.png"
     }
   },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
   "background": {
     "service_worker": "background/service-worker.js",
     "type": "module"
@@ -25,7 +31,13 @@
   "content_scripts": [
     {
       "matches": ["https://claude.ai/*"],
-      "js": ["content/claude.ai.js"],
+      "js": ["content/_shared.js", "content/claude.ai.js"],
+      "css": ["content/pii-shield-badge.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+      "js": ["content/_shared.js", "content/chatgpt.com.js"],
       "css": ["content/pii-shield-badge.css"],
       "run_at": "document_idle"
     }

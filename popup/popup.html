@@ -64,8 +64,20 @@
       </label>
     </section>
 
+    <section class="block toggle-block">
+      <label class="toggle">
+        <input id="auto-intercept-toggle" type="checkbox" />
+        <span class="toggle__track"><span class="toggle__thumb"></span></span>
+        <span class="toggle__lbl" data-i18n="auto_intercept_label">Автоматическая защита (Enter)</span>
+      </label>
+      <div class="hint" data-i18n="auto_intercept_hint">
+        При нажатии Enter маскируем ПД до отправки в LLM.
+      </div>
+    </section>
+
     <footer class="ftr">
-      <span>v0.1.0 · MVP</span>
+      <span>v0.2.0</span>
+      <a id="open-options" href="#" data-i18n="open_options">Настройки</a>
       <a href="https://github.com/brikkoAI/brikko-shield" target="_blank" rel="noopener">GitHub</a>
     </footer>
 

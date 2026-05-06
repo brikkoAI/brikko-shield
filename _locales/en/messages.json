@@ -3,13 +3,13 @@
     "message": "Brikko Shield"
   },
   "extension_description": {
-    "message": "Privacy shield for LLM chats. Masks PII before sending to Claude and restores it in responses."
+    "message": "Privacy shield for LLM chats. Masks PII before sending to ChatGPT or Claude and restores it in responses."
   },
   "popup_title": {
     "message": "Brikko Shield"
   },
   "popup_subtitle": {
-    "message": "PII shield for Claude.ai"
+    "message": "PII shield for ChatGPT and Claude.ai"
   },
   "status_active": {
     "message": "Protection active"
@@ -36,7 +36,49 @@
     "message": "Get a key at brikko.ru"
   },
   "toggle_label": {
-    "message": "Enabled"
+    "message": "Extension enabled"
+  },
+  "auto_intercept_label": {
+    "message": "Auto-protect on Enter"
+  },
+  "auto_intercept_hint": {
+    "message": "On Enter, mask PII before sending."
+  },
+  "auto_intercept_hint_long": {
+    "message": "When you press Enter in a chat, your text is masked before being sent to the LLM. When off, only the manual “Shield” button works."
+  },
+  "open_options": {
+    "message": "Settings"
+  },
+  "options_subtitle": {
+    "message": "Privacy settings for LLM chats"
+  },
+  "section_api": {
+    "message": "API key"
+  },
+  "section_protection": {
+    "message": "Protection"
+  },
+  "section_sites": {
+    "message": "Sites"
+  },
+  "section_stats": {
+    "message": "Stats"
+  },
+  "show_hide": {
+    "message": "Show"
+  },
+  "enabled_hint": {
+    "message": "Global switch. When off, the extension does not touch chat pages."
+  },
+  "sites_hint": {
+    "message": "Turn protection on only where you need it. The extension only runs on these domains."
+  },
+  "stat_today": {
+    "message": "requests protected today"
+  },
+  "stats_hint": {
+    "message": "Brikko Shield sends no telemetry. These numbers live only in your browser."
   },
   "badge_protected": {
     "message": "PII masked"

@@ -9,6 +9,8 @@
   const saveBtn = $('save-btn');
   const feedback = $('save-feedback');
   const enabledToggle = $('enabled-toggle');
+  const autoInterceptToggle = $('auto-intercept-toggle');
+  const openOptionsLink = $('open-options');
   const statusDot = $('status-dot');
   const statusText = $('status-text');
 
@@ -58,12 +60,15 @@
 
   // ---- load ----------------------------------------------------------------
   async function load() {
-    const { brikko_api_key, brikko_enabled } = await chrome.storage.sync.get([
-      'brikko_api_key',
-      'brikko_enabled',
-    ]);
+    const { brikko_api_key, brikko_enabled, auto_intercept } =
+      await chrome.storage.sync.get([
+        'brikko_api_key',
+        'brikko_enabled',
+        'auto_intercept',
+      ]);
     if (brikko_api_key) apiKeyInput.value = brikko_api_key;
     enabledToggle.checked = brikko_enabled !== false;
+    autoInterceptToggle.checked = !!auto_intercept;
     recomputeStatus();
   }
 
@@ -97,6 +102,21 @@
     await chrome.storage.sync.set({ brikko_enabled: enabledToggle.checked });
     recomputeStatus();
   });
+
+  autoInterceptToggle.addEventListener('change', async () => {
+    await chrome.storage.sync.set({ auto_intercept: autoInterceptToggle.checked });
+  });
+
+  if (openOptionsLink) {
+    openOptionsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+      } else {
+        window.open(chrome.runtime.getURL('options/options.html'), '_blank');
+      }
+    });
+  }
 
   // ---- init -----------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {

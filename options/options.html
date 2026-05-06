@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brikko Shield — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__hdr">
+        <div class="page__hdr-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="Shield">
+            <path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z" fill="#fafaf9" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="page__title">Brikko Shield</h1>
+          <p class="page__sub" data-i18n="options_subtitle">Настройки приватности для LLM-чатов</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2 class="card__title" data-i18n="section_api">API-ключ</h2>
+        <div class="card__row">
+          <label class="lbl" for="api-key" data-i18n="api_key_label">API-ключ Brikko</label>
+          <div class="row">
+            <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="brk_..." />
+            <button id="show-key" type="button" class="btn btn--ghost" data-i18n="show_hide">Показать</button>
+          </div>
+          <div class="card__meta">
+            <span id="api-status" class="api-status">—</span>
+            <a class="link" href="https://brikko.ru/app" target="_blank" rel="noopener" data-i18n="get_key_link"
+              >Получить ключ на brikko.ru</a
+            >
+          </div>
+          <div class="card__actions">
+            <button id="save-btn" class="btn" data-i18n="save_button">Сохранить</button>
+            <span id="save-feedback" class="feedback" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title" data-i18n="section_protection">Защита</h2>
+
+        <label class="toggle-row">
+          <span>
+            <span class="toggle-row__lbl" data-i18n="toggle_label">Расширение включено</span>
+            <span class="toggle-row__hint" data-i18n="enabled_hint">
+              Глобальный выключатель. Когда выключено, расширение не вмешивается в чаты.
+            </span>
+          </span>
+          <input id="enabled-toggle" type="checkbox" class="toggle-input" />
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <span class="toggle-row__lbl" data-i18n="auto_intercept_label">Автоматическая защита (Enter)</span>
+            <span class="toggle-row__hint" data-i18n="auto_intercept_hint_long">
+              При нажатии Enter в чате текст маскируется до отправки в LLM. Если выключено —
+              работает только ручная кнопка «🛡 Защитить».
+            </span>
+          </span>
+          <input id="auto-intercept-toggle" type="checkbox" class="toggle-input" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title" data-i18n="section_sites">Сайты</h2>
+        <p class="card__hint" data-i18n="sites_hint">
+          Включайте защиту только там, где она вам нужна. Расширение работает только на этих
+          доменах — никаких других страниц оно не читает.
+        </p>
+
+        <label class="toggle-row">
+          <span>
+            <span class="toggle-row__lbl">claude.ai</span>
+            <span class="toggle-row__hint">Anthropic Claude</span>
+          </span>
+          <input id="site-claude" type="checkbox" class="toggle-input" data-host="claude.ai" />
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <span class="toggle-row__lbl">chatgpt.com / chat.openai.com</span>
+            <span class="toggle-row__hint">OpenAI ChatGPT</span>
+          </span>
+          <input id="site-chatgpt" type="checkbox" class="toggle-input" data-host="chatgpt.com" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title" data-i18n="section_stats">Статистика</h2>
+        <div class="stat">
+          <div class="stat__num" id="stat-today">0</div>
+          <div class="stat__lbl" data-i18n="stat_today">запросов защищено сегодня</div>
+        </div>
+        <p class="card__hint" data-i18n="stats_hint">
+          Brikko Shield не отправляет никаких метрик наружу. Эти числа хранятся только в вашем
+          браузере (chrome.storage.sync).
+        </p>
+      </section>
+
+      <footer class="page__ftr">
+        <span>v0.2.0</span>
+        <a href="https://github.com/brikkoAI/brikko-shield" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://brikko.ru" target="_blank" rel="noopener">brikko.ru</a>
+      </footer>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
