@@ -1,5 +1,14 @@
 # Brikko Shield
 
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/brikkoAI/brikko-shield/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Manifest V3](https://img.shields.io/badge/manifest-v3-4285F4.svg)](https://developer.chrome.com/docs/extensions/mv3/intro/)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-coming%20soon-lightgrey.svg)](#установка-chrome--edge)
+[![GitHub stars](https://img.shields.io/github/stars/brikkoAI/brikko-shield?style=social)](https://github.com/brikkoAI/brikko-shield/stargazers)
+[![152-ФЗ](https://img.shields.io/badge/152--ФЗ-compliant-success.svg)](#безопасность-и-приватность)
+
+> **Часть [Brikko Privacy Ecosystem](https://brikko.ru)** — open-source инфраструктура маскинга персональных данных перед AI для русского рынка.
+
 **Браузерное расширение для защиты персональных данных при работе с LLM-чатами.**
 
 Перед отправкой сообщения в ChatGPT или Claude расширение маскирует ИНН, СНИЛС, ФИО, телефоны, паспорта, e-mail, номера карт и пр. через [api.brikko.ru](https://brikko.ru). В ответе модели плейсхолдеры (`<NAME_1>`, `<INN_1>` и т.д.) автоматически восстанавливаются — вы читаете реальные имена, LLM обрабатывает только маски.
@@ -146,6 +155,19 @@ cd brikko-shield
 ## Скриншоты
 
 `TODO`: добавить в v0.2.1 — popup, options page, manual button на ChatGPT, бейдж состояний.
+
+---
+
+## 🔗 Связанные продукты Brikko
+
+| Артефакт | Установка | Аудитория |
+|---|---|---|
+| [brikko-studio](https://github.com/brikkoAI/brikko-studio) | `curl install.brikko.ru/studio.sh \| bash` | Desktop AI agent с MCP |
+| **brikko-shield** ★ (вы здесь) | Chrome Web Store (скоро) | Маскинг в ChatGPT/Claude.ai |
+| [brikko-cli](https://github.com/brikkoAI/brikko-cli) | `npm install -g brikko-cli` | CLI для Studio |
+| [brikko-pii-skill](https://github.com/brikkoAI/brikko-pii-skill) | `git clone` | Skill для Claude Code/Cursor |
+| [n8n-nodes-brikko](https://github.com/brikkoAI/n8n-nodes-brikko) | `npm install n8n-nodes-brikko` | Маскинг в n8n workflows |
+| [presidio-ru-recognizers](https://github.com/brikkoAI/presidio-ru-recognizers) | `pip install presidio-ru-recognizers` | Python recognizers для Presidio |
 
 ## Лицензия
 
